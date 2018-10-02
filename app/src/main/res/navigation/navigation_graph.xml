@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/restaurantsFragment">
+
+    <fragment
+        android:id="@+id/restaurantsFragment"
+        android:name="com.chuby.navigationexample.RestaurantsFragment"
+        android:label="RestaurantsFragment"
+        tools:layout="@layout/fragment_restaurants">
+        <action
+            android:id="@+id/action_restaurantsFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="com.chuby.navigationexample.RestaurantDetailFragment"
+        android:label="fragment_restaurant_detail"
+        tools:layout="@layout/fragment_restaurant_detail">
+        <action
+            android:id="@+id/action_restaurantDetailFragment_to_restaurantReviewsFragment"
+            app:destination="@id/restaurantReviewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantReviewsFragment"
+        android:name="com.chuby.navigationexample.RestaurantReviewsFragment"
+        android:label="RestaurantReviewsFragment"
+        tools:layout="@layout/fragment_restaurant_reviews">
+        <action
+            android:id="@+id/action_restaurantReviewsFragment_to_reviewDetailFragment"
+            app:destination="@id/reviewDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewDetailFragment"
+        android:name="com.chuby.navigationexample.ReviewDetailFragment"
+        android:label="ReviewDetailFragment"
+        tools:layout="@layout/fragment_review_detail">
+    </fragment>
+
+</navigation>
