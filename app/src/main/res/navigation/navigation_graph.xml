@@ -34,6 +34,13 @@
             app:exitAnim="@anim/slide_out_bottom"
             app:popEnterAnim="@anim/slide_in_bottom"
             app:popExitAnim="@anim/slide_out_top" />
+        <action
+            android:id="@+id/action_restaurantDetailFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_out_top"
+            app:popExitAnim="@anim/slide_in_top" />
     </fragment>
 
     <fragment
@@ -46,6 +53,20 @@
             android:defaultValue="@null"
             app:argType="com.chuby.navigationexample.data.Review"
             app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.chuby.navigationexample.chekin.CheckInFragment"
+        android:label="CheckInFragment"
+        tools:layout="@layout/fragment_checkin">
+        <action
+            android:id="@+id/action_checkInFragment_to_reviewDetailFragment"
+            app:destination="@id/reviewDetailFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_in_left" />
     </fragment>
 
 </navigation>
