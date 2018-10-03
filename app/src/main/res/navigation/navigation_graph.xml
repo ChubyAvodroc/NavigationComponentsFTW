@@ -33,6 +33,9 @@
         android:name="com.chuby.navigationexample.reviews.ReviewDetailFragment"
         android:label="ReviewDetailFragment"
         tools:layout="@layout/fragment_review_detail">
+        <argument
+            android:name="Review"
+            app:argType="com.chuby.navigationexample.data.Review" />
     </fragment>
 
 </navigation>
