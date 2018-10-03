@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.chuby.navigationexample.R
 import com.chuby.navigationexample.data.Restaurant
@@ -41,6 +42,9 @@ class RestaurantDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         rvRestaurantReviews.layoutManager = LinearLayoutManager(requireContext())
         rvRestaurantReviews.adapter = adapter
+        bCheckIn.setOnClickListener(Navigation
+                .createNavigateOnClickListener(R.id.action_restaurantDetailFragment_to_checkInFragment)
+        )
     }
 
     override fun onResume() {
