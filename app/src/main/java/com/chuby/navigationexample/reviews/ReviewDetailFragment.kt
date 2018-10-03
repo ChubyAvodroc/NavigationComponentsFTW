@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_review_detail.*
 
 class ReviewDetailFragment : Fragment() {
 
-    private lateinit var review: Review
+    private var review: Review? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
