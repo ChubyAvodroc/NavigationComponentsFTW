@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Navigation Example</string>
+    <string name="content_description_picture_of_restaurant_front_street_view">Picture of restaurant front street view</string>
 </resources>

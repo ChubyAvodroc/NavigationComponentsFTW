@@ -3,4 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="restaurant_item_background">#707070</color>
+    <color name="restaurant_name_text_color">@color/white</color>
+    <color name="restaurant_rate_text_color">@color/white</color>
+    <color name="restaurant_disclaimer_text_color">@color/white</color>
 </resources>
