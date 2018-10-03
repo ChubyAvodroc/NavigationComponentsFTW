@@ -35,8 +35,8 @@
             app:popEnterAnim="@anim/slide_in_bottom"
             app:popExitAnim="@anim/slide_out_top" />
         <action
-            android:id="@+id/action_restaurantDetailFragment_to_checkInFragment"
-            app:destination="@id/checkInFragment"
+            android:id="@+id/action_restaurantDetailFragment_to_bookInFragment"
+            app:destination="@id/bookInFragment"
             app:enterAnim="@anim/slide_in_bottom"
             app:exitAnim="@anim/slide_out_bottom"
             app:popEnterAnim="@anim/slide_out_top"
@@ -56,10 +56,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/checkInFragment"
-        android:name="com.chuby.navigationexample.chekin.CheckInFragment"
-        android:label="CheckInFragment"
-        tools:layout="@layout/fragment_checkin">
+        android:id="@+id/bookInFragment"
+        android:name="com.chuby.navigationexample.bookin.BookInFragment"
+        android:label="BookInFragment"
+        tools:layout="@layout/fragment_bookin">
         <action
             android:id="@+id/action_checkInFragment_to_reviewDetailFragment"
             app:destination="@id/reviewDetailFragment"

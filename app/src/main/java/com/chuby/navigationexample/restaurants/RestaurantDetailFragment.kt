@@ -43,7 +43,7 @@ class RestaurantDetailFragment : Fragment() {
         rvRestaurantReviews.layoutManager = LinearLayoutManager(requireContext())
         rvRestaurantReviews.adapter = adapter
         bCheckIn.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.action_restaurantDetailFragment_to_checkInFragment)
+                .createNavigateOnClickListener(R.id.action_restaurantDetailFragment_to_bookInFragment)
         )
     }
 
