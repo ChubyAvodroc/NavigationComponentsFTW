@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/restaurantsFragment"
-        android:name="com.chuby.navigationexample.RestaurantsFragment"
+        android:name="com.chuby.navigationexample.restaurants.RestaurantsFragment"
         android:label="RestaurantsFragment"
         tools:layout="@layout/fragment_restaurants">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/restaurantDetailFragment"
-        android:name="com.chuby.navigationexample.RestaurantDetailFragment"
+        android:name="com.chuby.navigationexample.restaurants.RestaurantDetailFragment"
         android:label="fragment_restaurant_detail"
         tools:layout="@layout/fragment_restaurant_detail">
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/restaurantReviewsFragment"
-        android:name="com.chuby.navigationexample.RestaurantReviewsFragment"
+        android:name="com.chuby.navigationexample.reviews.RestaurantReviewsFragment"
         android:label="RestaurantReviewsFragment"
         tools:layout="@layout/fragment_restaurant_reviews">
         <action
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/reviewDetailFragment"
-        android:name="com.chuby.navigationexample.ReviewDetailFragment"
+        android:name="com.chuby.navigationexample.reviews.ReviewDetailFragment"
         android:label="ReviewDetailFragment"
         tools:layout="@layout/fragment_review_detail">
     </fragment>
