@@ -43,7 +43,9 @@
         tools:layout="@layout/fragment_review_detail">
         <argument
             android:name="Review"
-            app:argType="com.chuby.navigationexample.data.Review" />
+            android:defaultValue="@null"
+            app:argType="com.chuby.navigationexample.data.Review"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

@@ -27,7 +27,8 @@ class RestaurantDetailFragment : Fragment() {
         restaurant = repository.getRestaurantById(restaurantId)
         adapter = ReviewsAdapter { review, view ->
             val action = RestaurantDetailFragmentDirections
-                    .actionRestaurantDetailFragmentToReviewDetailFragment(review)
+                    .actionRestaurantDetailFragmentToReviewDetailFragment()
+            action.setReview(review)
             view.findNavController().navigate(action)
         }
     }

@@ -24,7 +24,7 @@ class ReviewDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvReviewObject.text = review.toString()
+        tvReviewObject.text = review?.toString() ?: "There is no object"
     }
 
 }
