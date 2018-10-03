@@ -20,21 +20,11 @@
         android:name="com.chuby.navigationexample.restaurants.RestaurantDetailFragment"
         android:label="fragment_restaurant_detail"
         tools:layout="@layout/fragment_restaurant_detail">
-        <action
-            android:id="@+id/action_restaurantDetailFragment_to_restaurantReviewsFragment"
-            app:destination="@id/restaurantReviewsFragment" />
         <argument
             android:name="restaurantId"
             app:argType="integer" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/restaurantReviewsFragment"
-        android:name="com.chuby.navigationexample.reviews.RestaurantReviewsFragment"
-        android:label="RestaurantReviewsFragment"
-        tools:layout="@layout/fragment_restaurant_reviews">
         <action
-            android:id="@+id/action_restaurantReviewsFragment_to_reviewDetailFragment"
+            android:id="@+id/action_restaurantDetailFragment_to_reviewDetailFragment"
             app:destination="@id/reviewDetailFragment" />
     </fragment>
 
