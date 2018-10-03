@@ -30,17 +30,17 @@
         <action
             android:id="@+id/action_restaurantDetailFragment_to_reviewDetailFragment"
             app:destination="@id/reviewDetailFragment"
-            app:enterAnim="@anim/slide_in_top"
-            app:exitAnim="@anim/slide_out_bottom"
-            app:popEnterAnim="@anim/slide_in_bottom"
-            app:popExitAnim="@anim/slide_out_top" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_restaurantDetailFragment_to_bookInFragment"
             app:destination="@id/bookInFragment"
-            app:enterAnim="@anim/slide_in_bottom"
-            app:exitAnim="@anim/slide_out_bottom"
-            app:popEnterAnim="@anim/slide_out_top"
-            app:popExitAnim="@anim/slide_in_top" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -61,12 +61,12 @@
         android:label="BookInFragment"
         tools:layout="@layout/fragment_bookin">
         <action
-            android:id="@+id/action_checkInFragment_to_reviewDetailFragment"
+            android:id="@+id/action_bookInFragment_to_reviewDetailFragment"
             app:destination="@id/reviewDetailFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_out_right"
-            app:popExitAnim="@anim/slide_in_left" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
 </navigation>

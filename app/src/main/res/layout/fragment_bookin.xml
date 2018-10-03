@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +8,81 @@
     tools:context=".bookin.BookInFragment">
 
     <TextView
+        android:id="@+id/tvBookInName"
         android:layout_width="wrap_content"
-        android:text=""
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/book_in_name"
+        app:layout_constraintBottom_toTopOf="@+id/tvBookInPeople"
+        app:layout_constraintEnd_toStartOf="@+id/etBookInName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etBookInName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/book_in_hint_name"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBookInName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBookInName" />
+
+    <TextView
+        android:id="@+id/tvBookInPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_in_people"
+        app:layout_constraintBottom_toTopOf="@+id/tvBookInSchedule"
+        app:layout_constraintEnd_toStartOf="@+id/etBookInPeople"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookInName" />
+
+    <EditText
+        android:id="@+id/etBookInPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/book_in_hint_people"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBookInPeople"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBookInPeople" />
+
+    <TextView
+        android:id="@+id/tvBookInSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_in_schedule"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/etBookInSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookInPeople" />
+
+    <EditText
+        android:id="@+id/etBookInSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/book_in_hint_schedule"
+        android:inputType="datetime"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBookInSchedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBookInSchedule" />
 
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
 
+    <Button
+        android:id="@+id/bBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_in_booked"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
 </android.support.constraint.ConstraintLayout>
