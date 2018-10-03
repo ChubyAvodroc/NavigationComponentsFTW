@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.chuby.navigationexample.R
 import com.chuby.navigationexample.data.Restaurant
 import com.chuby.navigationexample.data.RestaurantRepository
@@ -25,6 +26,9 @@ class RestaurantDetailFragment : Fragment() {
         val restaurantId = RestaurantDetailFragmentArgs.fromBundle(arguments).restaurantId
         restaurant = repository.getRestaurantById(restaurantId)
         adapter = ReviewsAdapter { review, view ->
+            val action = RestaurantDetailFragmentDirections
+                    .actionRestaurantDetailFragmentToReviewDetailFragment(review)
+            view.findNavController().navigate(action)
         }
     }
 
