@@ -5,8 +5,9 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
-import com.chuby.navigationexample.R
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import com.chuby.navigationexample.R
 import com.chuby.navigationexample.data.RestaurantRepository
 import com.chuby.navigationexample.data.RestaurantRepositoryImpl
 import kotlinx.android.synthetic.main.fragment_restaurants.*
@@ -21,7 +22,12 @@ class RestaurantsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        adapter = RestaurantsAdapter()
+        adapter = RestaurantsAdapter { restaurant, view ->
+
+            val action = RestaurantsFragmentDirections
+                    .actionRestaurantsFragmentToRestaurantDetailFragment(restaurant.id)
+            view.findNavController().navigate(action)
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

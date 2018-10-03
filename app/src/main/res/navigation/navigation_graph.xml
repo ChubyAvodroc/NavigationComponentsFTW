@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_restaurantDetailFragment_to_restaurantReviewsFragment"
             app:destination="@id/restaurantReviewsFragment" />
+        <argument
+            android:name="restaurantId"
+            app:argType="integer" />
     </fragment>
 
     <fragment

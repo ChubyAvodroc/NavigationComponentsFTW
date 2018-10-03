@@ -9,7 +9,7 @@ import com.chuby.navigationexample.data.Restaurant
 import kotlinx.android.synthetic.main.item_restaurant.view.*
 
 class RestaurantsAdapter(
-        private val onItemClickListener: (Restaurant) -> Unit = {}
+        private val onItemClickListener: ((Restaurant, View) -> Unit)? = null
 ) : RecyclerView.Adapter<RestaurantsAdapter.RestaurantViewHolder>() {
 
     private val items: MutableList<Restaurant> = mutableListOf()
@@ -36,7 +36,7 @@ class RestaurantsAdapter(
 
     class RestaurantViewHolder(
             itemView: View,
-            private val onItemClickListener: (Restaurant) -> Unit
+            private val onItemClickListener: ((Restaurant, View) -> Unit)?
     ) : RecyclerView.ViewHolder(itemView) {
 
         fun bindTo(item: Restaurant) {
@@ -45,7 +45,7 @@ class RestaurantsAdapter(
                 itemView.tvRestaurantRate.text = rate.toString()
                 itemView.tvRestaurantDisclaimer.text = disclaimer
                 itemView.setOnClickListener {
-                    onItemClickListener(this)
+                    onItemClickListener?.invoke(this, itemView)
                 }
             }
         }
